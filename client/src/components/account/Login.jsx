@@ -141,8 +141,8 @@ const Login = ({isUserAuthenticated}) =>{
                 
                 ?
                     <Wrapper>
-                        <TextField variant="standard" value={login.username} label="Enter username" onChange={(e)=>onValueChange(e)} name="username" />
-                        <TextField variant="standard" value={login.password} label="Enter password" onChange={(e)=>onValueChange(e)} name="password" />
+                        <TextField variant="standard" type='text' value={login.username} label="Enter username" onChange={(e)=>onValueChange(e)} name="username" />
+                        <TextField variant="standard" type="password" label="Enter password" onChange={(e)=>onValueChange(e)} name="password" />
 
                         {error && <Error>{error}</Error>}
                         
@@ -152,7 +152,7 @@ const Login = ({isUserAuthenticated}) =>{
                     </Wrapper>
                 :
                     <Wrapper>
-                        <TextField variant="standard" name="name" onChange={(e)=>onInputChange(e)} label="Enter Name" />
+                        <TextField variant="standard" name="name" onChange={(e)=>onInputChange(e)} placeholder="Enter Name" />
                         <TextField variant="standard" name="username" onChange={(e)=>onInputChange(e)}  label="Enter username" />
                         <TextField type="password" variant="standard" name="password" onChange={(e)=>onInputChange(e)} label="Enter password" />
 
